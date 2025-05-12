@@ -1,16 +1,10 @@
-// index.ts
-
-import express, { Request, Response } from "express";
-
+import express from "express";
+import serverless from "serverless-http";
 const app = express();
-const PORT = process.env.PORT || 3000;
-
 app.use(express.json());
 
-app.get("/", (req: Request, res: Response) => {
-  res.json({ message: "Hello" });
+app.get("/", (req, res) => {
+  res.json({ message: "Hello from Turbo + Express + Vercel!" });
 });
 
-app.listen(5000, () => {
-  console.log(`Server is running on http://localhost:${5000}`);
-});
+export default serverless(app);
