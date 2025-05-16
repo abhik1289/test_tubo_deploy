@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Card } from "@repo/ui/card";
+import { } from "@repo/utils";
 // import {}
 import { Gradient } from "@repo/ui/gradient";
 import { TurborepoLogo } from "@repo/ui/turborepo-logo";

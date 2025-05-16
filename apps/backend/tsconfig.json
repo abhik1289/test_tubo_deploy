@@ -1,11 +1,18 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "outDir": "dist",
+    "sourceMap": true,
+    "target": "esnext",
     "module": "commonjs",
-    "rootDir": "src",
-    "outDir": "netlify/functions",
     "esModuleInterop": true,
-    "strict": true
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": true,
+    "strict": true,
+    "skipLibCheck": true
   },
-  "include": ["src"]
+  "include": [
+    "./api/*.ts",
+    "src/**/*.ts",
+    "test/**/*.ts",
+  ],
 }
