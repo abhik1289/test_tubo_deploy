@@ -1,15 +1,21 @@
 {
-  "projects": [
+  "version": 2,
+  "builds": [
     {
-      "name": "your-backend-api",
-      "rootDir": "apps/backend",
-      "buildCommand": "turbo build --filter=backend",
-      "outputDirectory": "dist",
-      "api/index.js": {
-        "runtime": "node:20.x"
-      }
+      "src": "src/index.ts",
+      "use": "@vercel/node"
     }
   ],
-  "installCommand": "pnpm install --frozen-lockfile",
-  "buildCommand": "turbo build"
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "src/index.ts",
+      "methods": [
+        "GET",
+        "POST",
+        "PUT",
+        "DELETE"
+      ]
+    }
+  ]
 }
