@@ -4,7 +4,7 @@ const app = express();
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.json({ message: "Hello from Turbo + Express + Vercel!" });
+  res.send("HELLO");
 });
 
 export default serverless(app);
